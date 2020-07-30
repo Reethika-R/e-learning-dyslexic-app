@@ -1,0 +1,66 @@
+<html>
+<head><title>Register_student</title> 
+<link rel="stylesheet" href="sty.css">
+</head>
+<body>
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Register</button>
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="/action_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          </div>
+
+      <h1>Enter details</h1>
+	  
+ <form name="abc" onsubmit="return validation();" action="connection.php" method="post">
+ <h2>
+ Name: <br>
+ <input type="text" name="name" required ><br><br>
+ Age: <br> 
+ <select>
+<option>5</option>
+<option>6</option>
+<option>7</option> 
+<option>8</option>
+<option>9</option>
+<option>10</option>
+</select>
+<br><br>
+ Phonenumber: <br>
+ <input type="number" name="phone" required><br><br>
+Email:<br>
+<input type="text" name="email" required><br><br> 
+ <a href="things.html" class="button">NEXT PAGE<br><br></a> <br> <br>
+  <input type="submit" name="submit"><br><br>
+
+</h2></form>
+ </body>
+<script>
+function validation()
+{
+var name=document.abc.name;
+var location=document.abc.location;
+var phoneno=document.abc.phone;
+var letters = /^[A-Za-z]+$/;
+var number=/^[0-9]+$/;
+if(name.value.match(letters))
+{}
+else{
+alert("Enter alphabets in the name field");
+}
+if(location.value.match(letters))
+{}
+else
+{
+alert("Enter alphabets in the location field");
+}
+if(phoneno.value.match(number))
+{  alert("Thank you! Registration was successfull"); }
+else
+{
+alert("Enter numbers in the phone number field");
+}
+}
+</script>
+</html>

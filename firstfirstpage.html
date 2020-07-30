@@ -1,0 +1,165 @@
+<html>
+<head>
+<style>
+.button1{
+background-color: purple;
+border:none;
+color: white;
+padding: 10px 10px 10px 10px;
+text-align:center;
+text-decoration:none;
+display:inline-block;
+font-size:20px;
+margin: 2x 2px;
+cursor:pointer;
+border-radius: 12px;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="sty.css">
+</head>
+<body>
+<ul>
+  <li><a class="active" href="firstfirstpage.html">Home</a></li>
+  <li><a href="about.html">About us</a></li>
+  <li><a href="contact.html">Contact</a></li>
+  <li><a href="view.html">Items</a></li>
+  </ul>
+<img src="pic1.png" style="width:60%"><br>
+  <div class="text-block">
+<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+</div>
+    
+<div id="id01" class="modal">
+
+  	<center><button onclick="document.getElementById('id03').style.display='block'" style="width:auto;">STUDENT</button></center>
+		<div id="id03" class="modal">
+		
+		<center><form class="modal-content animate" action="/action_page.php" method="post">
+		<div class="imgcontainer">
+      <span onclick="document.getElementById('id03').style.display='none'" class="close" title="Close Modal">&times;</span>
+	<img src="avatar.png" style="width:50%;">
+		</div>
+			<div class="container">
+      <label for="uname"><b>SecretKey</b></label><br><br>
+      <input type="text" placeholder="Enter SecretKey" name="uname" required><br><br>
+	   <a href="studentpage.html" class="button1">Login</a><br>
+			</div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id03').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div>
+  </form></center>
+	</div>
+	<br>
+	<br>
+	<br>
+	<br> <br> <br>
+   <center><button onclick="document.getElementById('id04').style.display='block'" style="width:auto;">TEACHER</button></center>
+		<div id="id04" class="modal">
+	
+  <form class="modal-content animate" action="/action_page.php" method="post">
+			<div class="imgcontainer">
+      <span onclick="document.getElementById('id04').style.display='none'" class="close" title="Close Modal">&times;</span>
+			<img src="avatar.png" style="width:50%;">
+			</div>
+
+			<div class="container">
+      <label for="uname"><b>Username</b></label><br><br>
+      <input type="text" placeholder="Enter Username" name="uname" required><br><br>
+
+      <label for="psw"><b>Password</b></label><br><br>
+      <input type="password" placeholder="Enter Password" name="psw" required><br><br>
+	  
+	   <a href="teacherpage.html" class="button1">Login</a><br>
+
+	 	  <label>
+        <input type="checkbox" checked="unchecked" name="remember"> Remember me
+      </label>
+			</div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+      <span class="psw">Forgot <a href="#">password?</a></span>
+    </div> 
+  </form>
+	</div>
+</div>
+<br>
+
+<br>
+<div>
+  <div class="text-block2">
+<button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Register</button>
+</div>
+<div id="id02" class="modal">
+  
+  <form class="modal-content animate" method="post">
+    <div class="imgcontainer">
+
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" style="width:auto;">&times;</span>
+          </div>
+  <img src="pic2.png" style="width:50%;">
+      <h1>Enter details</h1>
+	  
+ <form name="abc" onsubmit="return validation();"  method="post">
+ <h2>
+ Name: <br>
+ <input type="text" name="name" required ><br>
+ Age: <br> 
+ <select>
+<option>5</option>
+<option>6</option>
+<option>7</option> 
+<option>8</option>
+<option>9</option>
+<option>10</option>
+</select>
+<br>
+ Phonenumber: <br>
+ <input type="number" name="phone" required><br>
+Email:<br>
+<input type="text" name="email" required><br><br>
+<form name="abcd" onsubmit="return answer();" method="post">
+<input type="submit" class="button1">
+</h2></form>
+</body>
+<script>
+function validation()
+{
+var name=document.abc.name;
+var location=document.abc.location;
+var phoneno=document.abc.phone;
+var letters = /^[A-Za-z]+$/;
+var number=/^[0-9]+$/;
+if(name.value.match(letters))
+{}
+else{
+alert("Enter alphabets in the name field");
+}
+if(location.value.match(letters))
+{}
+else
+{
+alert("Enter alphabets in the location field");
+}
+if(phoneno.value.match(number))
+{  alert("Thank you! Registration was successfull"); }
+else
+{
+alert("Enter numbers in the phone number field");
+}
+}
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
+
+</html>
